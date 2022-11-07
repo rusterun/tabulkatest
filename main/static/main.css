@@ -1,0 +1,103 @@
+.l1{
+  z-index: 1;
+  position: absolute;
+  background-color: black;
+  color: blueviolet;
+}
+.l2{
+  z-index: 2;
+  position: absolute;
+}
+
+#tabulkaDiv{
+  overflow: auto;
+  height: 80%;
+  width: 80%;
+  border: 8px ridge #5473ff;
+  position: fixed;
+}
+
+#tabulkaTable{
+    display: table;
+    table-layout: fixed;
+    border: 2px solid #40d2ff;
+    position: fixed;
+}
+
+.apartHeadCell{
+    display: table-cell;
+    position: sticky;
+    top: 0;
+    background-color: aquamarine;
+    border: 2.5px solid black;
+    z-index: 1;
+    width: 1000px !important;
+    padding: 5px 10px;
+}
+
+.headRow{
+    display: table-row;
+}
+
+.monthHeadCell{
+
+    display: table-cell;
+    position: sticky;
+    top: 0;
+    border: 2.5px solid black;
+    background-color: #ff6a6a;
+    padding: 5px 10px;
+    z-index: 1;
+}
+
+.dayColumnCell{
+    display: table-cell;
+    position: sticky;
+    left: 0;
+    background-color: #006c48;
+    border: 2.5px solid black;
+    border-right: 3px;
+    padding: 5px 10px;
+}
+
+.cell{
+    display: table-cell;
+    border-style: solid;
+    border-width: 1px;
+    padding: 3px 3px;
+}
+
+.row{
+    display: table-row;
+}
+
+.arrive_depart_cell {
+    background: yellow;
+}
+
+.live_cell {
+    background: orange;
+}
+
+.one_night_cell {
+    background: blueviolet;
+}
+
+.btn {
+    display: inline-block; /* Строчно-блочный элемент */
+    background: #8C959D; /* Серый цвет фона */
+    color: #fff; /* Белый цвет текста */
+    padding: 1rem 1.5rem; /* Поля вокруг текста */
+    text-decoration: none; /* Убираем подчёркивание */
+    border-radius: 3px; /* Скругляем уголки */
+   }
+
+.disabledbtn {
+    display: inline-block; /* Строчно-блочный элемент */
+    background: #8C959D; /* Серый цвет фона */
+    padding: 1rem 1.5rem; /* Поля вокруг текста */
+    text-decoration: none; /* Убираем подчёркивание */
+    border-radius: 3px; /* Скругляем уголки */
+    pointer-events: none; /* делаем ссылку некликабельной */
+    cursor: default;  /* устанавливаем курсор в виде стрелки */
+}

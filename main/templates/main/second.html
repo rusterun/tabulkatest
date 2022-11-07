@@ -1,0 +1,50 @@
+{% extends 'main/base.html' %}
+{% load my_extra_tags %}
+
+{% block title %}
+Чёрт его главка
+{% endblock %}
+
+{% block content %}
+<select class="form-select-sm" aria-label="Default select" name="month">
+    <option value="AUG" selected>AUGUST</option>
+    <option value="NOV">NOVEMBER</option>
+    <option value="SEP">SEPTEMPER</option>
+    <option value="OCT">OCTOBER</option>
+</select>
+<select class="form-select-sm" aria-label="Default select" name="selected_year" method="get">
+    <option value="2022" selected>2022</option>
+    <option value="2023">2023</option>
+    <option value="2024">2024</option>
+    <option value="2025">2025</option>
+</select>
+<table border="1">
+    <thead>
+        <td>AUG</td>
+        {% for p in properties %}
+        <td>{{ p }}</td>
+        {% endfor %}
+    </thead>
+    {% for d in mrange %}
+    <tr>
+        <td>{{ d }}</td>
+        {% for p in properties %}
+            {% for el in object_list %}
+
+            {% if el.arrival.day == d and el.property == p %}
+            <td style="background: khaki">
+            {{ el.first_name }} {{ el.last_name }}
+            </td>
+
+            {% else %}
+            <td></td>
+            {% endif %}
+
+            {% endfor %}
+        {% endfor %}
+    </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock %}

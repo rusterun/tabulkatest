@@ -1,0 +1,27 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+
+{{ title }}
+
+{% endblock %}
+
+{% block content %}
+    {% if bookings %}
+        {% for el in bookings %}
+
+            <div class="alert alert-warning mt-2">
+                <h3>{{ el.booking_info }}</h3>
+                <p>{{ el.arrival }}</p>
+                <p>{{ el.departure }}</p>
+            </div>
+
+        {% endfor %}
+
+
+
+    {% else %}
+        <p>Записей не найдено</p>
+    {% endif %}
+
+{% endblock %}
